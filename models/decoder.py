@@ -1,5 +1,5 @@
 import tinygrad.nn as nn
-from residual import ResidualStack
+from models.residual import ResidualStack
 
 
 class Decoder():
