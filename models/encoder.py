@@ -14,7 +14,7 @@ class Encoder():
 
     def __call__(self, x):
         for layer in self.conv_layers[:-1]:
-            x = layer(x).relu()
+            x = layer(x).leakyrelu(0.1)
         x = self.conv_layers[-1](x)
 
         return self.res(x)
